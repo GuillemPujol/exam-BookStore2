@@ -1,30 +1,28 @@
 import React from 'react';
-import bookTableRow from './bookTableRow';
+import BookTableRow from './BookTableRow';
 
-const bookTable = (props)=>{
+const BookTable = (props)=>{
     return(
         <table className="table">
             <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Author</th>
-                <th scope="col">Category</th>
-                <th scope="col">Price</th>
-                <th scope="col">Seller Name</th>
-                <th scope="col">Seller Email</th>
-            </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Job Title</th>
+                    <th scope="col">Salary</th>
+                </tr>
             </thead>
             <tbody>
-            {props.books.map(book=>{
-                return <bookTableRow key={book._id}
-                                         book={book}
-                                         deleteHandler={props.deleteHandler}
-                                         showEditForm={props.showEditForm}/>
-            })}
+               {props.books.map(book=>{
+                   return <BookTableRow key={book._id}
+                                            book={book}
+                                            deleteHandler={props.deleteHandler}
+                                            showEditForm={props.showEditForm}/>
+               })}
             </tbody>
         </table>
     )
 }
 
-export default bookTable;
+export default BookTable;

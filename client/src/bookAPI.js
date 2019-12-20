@@ -1,31 +1,31 @@
 export default {
-    getbooks : ()=>{
+    getBooks : ()=>{
         return fetch('/book')
-            .then(res => res.json())
-            .then(data => data);
+                .then(res => res.json())
+                .then(data => data);
     },
-    deletebook : (_id)=>{
+    deleteBook : (_id)=>{
         return fetch(`/book/${_id}`,
-            {method : 'delete'})
-            .then(res => res.json())
-            .then(data => data);
+                    {method : 'delete'})
+                    .then(res => res.json())
+                    .then(data => data);
     },
-    updatebook : (book)=>{
+    updateBook : (book)=>{
         return fetch(`/book/${book._id}`,
-            {method : "put",
-                body: JSON.stringify(book),
-                headers : {
-                    "Content-Type" : "application/json"
-                }}).then(res => res.json())
-            .then(data => data);
+                    {method : "put",
+                     body: JSON.stringify(book),
+                     headers : {
+                         "Content-Type" : "application/json"
+                     }}).then(res => res.json())
+                        .then(data => data);
     },
-    createbook : (book)=>{
+    createBook : (book)=>{
         return fetch(`/book`,
             {method : 'post',
-                body: JSON.stringify(book),
-                headers : {
-                    "Content-Type" : "application/json"
-                }}).then(res => res.json())
-            .then(data => data);
+            body: JSON.stringify(book),
+            headers : {
+                "Content-Type" : "application/json"
+            }}).then(res => res.json())
+                .then(data => data);
     }
 }
