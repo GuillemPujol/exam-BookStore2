@@ -1,14 +1,16 @@
 import React from 'react';
 
 const BookTableRow = (props)=>{
-    const {firstName,lastName,job,salary,_id} = props.book;
+    const {title,author,category,price,sellerName,sellerEmail,_id} = props.book;
     return(
         <tr>
             <th scope="row">{_id}</th>
-            <td>{firstName}</td>
-            <td>{lastName}</td>
-            <td>{job}</td>
-            <td>{salary}</td>
+            <td>{title}</td>
+            <td>{author}</td>
+            <td>{category}</td>
+            <td>{price}</td>
+            <td>{sellerName}</td>
+            <td>{sellerEmail}</td>
             <td>
                 <div className="btn-group" role="group" aria-label="Basic example">
                     <button type="button" onClick={props.showEditForm.bind(this,props.book)} className="btn btn-secondary">Edit</button>

@@ -7,10 +7,12 @@ const BookTable = (props)=>{
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Job Title</th>
-                    <th scope="col">Salary</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Seller Name</th>
+                    <th scope="col">Seller Email</th>
                 </tr>
             </thead>
             <tbody>
