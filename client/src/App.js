@@ -37,10 +37,12 @@ class App extends React.Component{
     resetForm(){
         this.setState({
             book: {
-                firstName : "",
-                lastName : "",
-                salary : "",
-                job : ""
+                title : "", 
+                author : "", 
+                category : "", 
+                price : "", 
+                sellerName: "", 
+                sellerEmail: ""
             }
         });
     }
