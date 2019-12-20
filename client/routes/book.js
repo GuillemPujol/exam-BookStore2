@@ -1,6 +1,6 @@
 const express = require('express');
 const bookRouter = express.Router();
-const book = require('./book');
+const book = require('../model/book');
 
 /*** Read ***/
 bookRouter.get('/',(req,res)=>{
